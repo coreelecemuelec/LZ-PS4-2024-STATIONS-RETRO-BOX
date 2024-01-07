@@ -1,15 +1,19 @@
+
 <theme>
      <formatVersion>7</formatVersion>
      <view name="system">
           <video name="system_video" extra="true">
-               <size>0.430 0.403</size>
+               <size>0.212 0.25</size>
+               <size ifSubset="aspect-ratio:4-3|5-4">0.22 0.22</size>
+               <size ifSubset="aspect-ratio:16-9|16-10">0.212 0.25</size>
                <effect>none</effect>
-               <roundCorners>10</roundCorners>
+               <roundCorners>0</roundCorners>
                <showSnapshotNoVideo>false</showSnapshotNoVideo>
                <showSnapshotDelay>false</showSnapshotDelay>
                <default>./../../_theme_inc/videos/no-video.mp4</default>
                <path ifSubset="video-system-random:enable-random|enable-ifnospot">{random}</path>
                <path ifSubset="video-system-random:disable-random|enable-ifnospot">./../../_theme_inc/videos/${system.theme}.mp4</path>
+               <delay>0.5</delay>
                <zIndex>70</zIndex>
                <audio ifSubset="video-system-audio:disable-audio">false</audio>
           </video>
@@ -28,6 +32,8 @@
           <text name="system_description" extra="true" ifSubset="carousel:big">
                <size>0.430 0.220</size>
                <fontSize>0.019</fontSize>
+               <fontSize ifSubset="aspect-ratio:4-3|5-4">0.02</fontSize>
+               <fontSize ifSubset="aspect-ratio:16-10">0.022</fontSize>
                <pos>0.493 0.61</pos>
           </text>
 
@@ -41,7 +47,7 @@
                <size>0.54 0</size>
                <pos>0.26 0.512</pos>
                <fontSize>0.026</fontSize>
-               
+               <fontSize ifSubset="aspect-ratio:4-3|5-4">0.023</fontSize>
 
           </text>
 
@@ -54,6 +60,7 @@
           <text name="system_description" extra="true" ifSubset="carousel:small">               
                <size>0.54 0</size>
                <fontSize>0.026</fontSize>
+               <fontSize ifSubset="aspect-ratio:4-3|5-4">0.024</fontSize>
                <pos>0.26 0.46</pos>
           </text>
 
